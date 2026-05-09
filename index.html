@@ -105,7 +105,19 @@
 		    var season = el.getAttribute("href");
 		
 		    // 3. Test the scoop!
-		    alert("The season is: " + season);
+		    //alert("The season is: " + season);
+
+
+			//select the background of the page
+			const html = document.querySelector("html");
+			const banner = document.querySelector("header > h2");
+
+			switch(season) {
+				case "spring": 
+					html.style.backgroundColor ="";
+					banner.textContent = "Leap into Spring";
+				break;
+			}
 		    
 		    // 4. Now you can use that 'season' variable to change pics/colors
 		    console.log("The season is: " + season);
