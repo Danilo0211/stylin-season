@@ -103,7 +103,7 @@
 		    // 1. 'element' is the <a> tag that was just clicked
 		    // 2. Scoop the href attribute (e.g., "winter")
 		    var season = el.getAttribute("href");
-		
+			season = season.toLowerCase();
 		    // 3. Test the scoop!
 		    //alert("The season is: " + season);
 
@@ -111,6 +111,8 @@
 			//select the background of the page
 			const html = document.querySelector("html");
 			const banner = document.querySelector("header > h2");
+			const logo = document.getElementById("logo");
+			const wear = document.getElementById("wear");
 
 			switch(season) {
 				case "spring": 
@@ -119,6 +121,9 @@
 				break;
 			}
 		    
+			logo.src = "images/" + season + ".gif";
+			wear.src = "images/" + wear + "-wear.jpg";
+
 		    // 4. Now you can use that 'season' variable to change pics/colors
 		    console.log("The season is: " + season);
 		}
