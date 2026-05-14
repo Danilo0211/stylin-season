@@ -42,7 +42,7 @@
 		<h1 class="masthead">Eddie Browser</h1>
 		<nav>
 			<ul>
-				<li class="seasons"><a href="default" onclick="changeSeason(this); return false;">default</a></li>
+				<li class="seasons"><a href="Default" onclick="changeSeason(this); return false;">Default</a></li>
 				<li class="seasons"><a href="Spring" onclick="changeSeason(this); return false;">Spring</a></li>
 				<li class="seasons"><a href="Summer" onclick="changeSeason(this); return false;">Summer</a></li>
 				<li class="seasons"><a href="Fall" onclick="changeSeason(this); return false;">Fall</a></li>
@@ -119,26 +119,27 @@
 				case "spring": 
 					html.style.backgroundColor ="#2B7129";
 					banner.textContent = "Spring Forward";
-				break;F
-
+				break;
 
 				case "summer": 
 					html.style.backgroundColor ="#EBA52B";
 					banner.textContent = "Slip into Summer";
 				break;
 
-
 				case "fall": 
 					html.style.backgroundColor ="A81124";
 					banner.textContent = "Fall back";
 				break;
 
-
-
 				case "winter": 
 					html.style.backgroundColor ="#005393";
 					banner.textContent = "Don't fall in winter";
 				break;
+
+				default: 
+					html.style.backgroundColor ="#ccc";
+					banner.textContent = "Default";
+				     
 			}
 		    
 			logo.src = "images/" + season + ".gif";
