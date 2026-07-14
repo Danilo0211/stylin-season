@@ -40,5 +40,5 @@ nav ul li
 		margin:0 2%; /* margin left-right, gets smaller as necessary */
 	}
 nav a:hover{
-	text-decoration: none;
+	text-decoration:crimson; /* changes color of text when mouse hovers over link */
 }	
