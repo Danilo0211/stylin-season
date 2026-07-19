@@ -49,11 +49,9 @@
 				<li class="seasons"><a href="Winter" onclick="changeSeason(this); return false;">Winter</a></li>
 			</ul>
 		</nav>
-	</header>
-	 
+	</header>	 
 	<main class="wrapper">
-	<header><h2>Outfitter for All Seasons!</h2></header>
-	
+	<header><h2>Outfitter for All Seasons!</h2></header>	
 			
 	<p><strong>Replace some text here</strong> and add your explanation of how this page works and what it does</p>	
 	<p>
@@ -81,17 +79,25 @@
 		migas retro Banksy YOLO Carles yr raw denim. Gluten-free fixie taxidermy pop-up, actually Kickstarter flannel 
 		put a bird on it master cleanse.
 	</p>
-	<p>
-	Text provided by <a href="http://hipsum.co/" target="_blank">Hipster Ipsum</a>
-	</p>
-	<footer>
-	<p><small>&copy; 2026 by 
-		Danilo Araujo, All Rights Reserved ~ 
-		<a id="html-checker" href="#">Check HTML</a> ~ 
-		<a id="css-checker" href="#">Check CSS</a></small>
-	</p>
-	</footer>
-	</main>
+	<! this is couresel html by ChatGBT. start here.-->
+	<section class="carousel">
+    <img src="images/winter/winter1.jpg" 
+         alt="Winter style 1" 
+         class="slide active">
+    <img src="images/winter/winter2.jpg" 
+         alt="Winter style 2" 
+         class="slide">
+    <img src="images/winter/winter3.jpg" 
+         alt="Winter style 3" 
+         class="slide">
+    <div class="dots">
+        <span class="dot active"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    </section>
+<!-- Seasonal Carousel End -->	
+	
 	<script>
 		function changeSeason(el) {
 		    // 1. 'element' is the <a> tag that was just clicked
@@ -145,7 +151,71 @@
 		    // 4. Now you can use that 'season' variable to change pics/colors
 		    console.log("The season is: " + season);
 		}
+		
+
+		// Season Style Carousel
+const slides = document.querySelectorAll(".slide");
+const dots = document.querySelectorAll(".dot");
+let currentSlide = 0;
+let carouselTimer;
+// Show selected slide
+function showSlide(index) {
+    // Hide all slides
+    slides.forEach(slide => {
+        slide.classList.remove("active");
+    });
+    // Remove active dot
+    dots.forEach(dot => {
+        dot.classList.remove("active");
+    });
+    // Show current slide
+    slides[index].classList.add("active");
+
+    // Highlight current dot
+    dots[index].classList.add("active");
+    currentSlide = index;
+}
+// Move automatically to next slide
+function nextSlide() {
+    currentSlide++;
+    if (currentSlide >= slides.length) {
+        currentSlide = 0;
+    }
+    showSlide(currentSlide);
+}
+// Start carousel timer
+function startCarousel() {
+    carouselTimer = setInterval(nextSlide, 3000);
+}
+// Dot navigation
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", function() {
+        showSlide(index);
+        // Restart timer after clicking
+        clearInterval(carouselTimer);
+        startCarousel();
+    });
+});
+
+
+// Start carousel when page loads
+if (slides.length > 0) {
+    showSlide(0);
+    startCarousel();
+}
+
 	</script>
 	<script src="js/main.js"></script>
+	<script src="js/carousel.js"></script>
+	<footer>
+	<p><small>&copy; 2026 by 
+		Danilo Araujo, All Rights Reserved ~ 
+		<a id="html-checker" href="#">Check HTML</a> ~ 
+		<a id="css-checker" href="#">Check CSS</a></small>
+	</p>
+	<p>	Text provided by <a href="http://hipsum.co/" target="_blank">Hipster Ipsum</a>
+	</p>
+	</footer>
+	</main>
 	</body>
 </html>
