@@ -70,6 +70,7 @@
 		tousled Banksy craft beer. Mlkshk direct trade locavore, mumblecore keytar artisan hashtag fap. 
 		Cred cronut Brooklyn, locavore art party small batch PBR semiotics ennui kitsch taxidermy mlkshk stumptown.
 	</p>
+
 	<p>
 	Polaroid iPhone plaid, Pitchfork Shoreditch paleo. Hashtag keytar chia scenester Pinterest, semiotics 
 		tousled food truck. YOLO scenester deep v, taxidermy paleo quinoa McSweeney's Carles VHS mustache 
@@ -80,6 +81,7 @@
 		put a bird on it master cleanse.
 	</p>
 
+	
 	<! this is couresel html by ChatGBT. start here.-->
 
 	<section class="carousel">
@@ -97,7 +99,10 @@
         <span class="dot"></span>
         <span class="dot"></span>
     </div>
+
+	
     </section>
+
 <p>Gluten-free selfies normcore chillwave. Listicle 90's chambray, seitan cold-pressed try-hard Etsy authentic flexitarian vinyl.
  Meditation bespoke freegan, single-origin coffee cred seitan 90's gentrify brunch Williamsburg squid cold-pressed. Brooklyn readymade Tumblr wayfarers ethical. 
  Biodiesel VHS Godard High Life, tousled Banksy craft beer. Mlkshk direct trade locavore, mumblecore keytar artisan hashtag fap. Cred cronut Brooklyn, locavore
@@ -201,16 +206,6 @@ function nextSlide() {
 function startCarousel() {
     carouselTimer = setInterval(nextSlide, 3000);
 }
-// Dot navigation
-dots.forEach((dot, index) => {
-    dot.addEventListener("click", function() {
-        showSlide(index);
-        // Restart timer after clicking
-        clearInterval(carouselTimer);
-        startCarousel();
-    });
-});
-
 
 // Start carousel when page loads
 if (slides.length > 0) {
@@ -218,8 +213,24 @@ if (slides.length > 0) {
     startCarousel();
 }
 
+
+// Dot navigation
+
+dots.forEach((dot, index) => {
+    dot.addEventListener("click", function() {
+        showSlide(index);
+        // Restart timer after clicking
+        clearInterval(carouselTimer);
+        startCarousel();
+		
+    });
+});
+
+
+
+
 	</script>
-	<script src="js/main.js"></script>
+	
 	<script src="js/carousel.js"></script>
 	<footer>
 	<p><small>&copy; 2026 by 
