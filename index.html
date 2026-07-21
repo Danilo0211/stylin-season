@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Every day life by by Danilo Araujo</title>
+		<title>Every day life by Danilo Araujo</title>
 		<meta charset="utf-8">
 		<meta name="robots" content="noindex,nofollow">
 		<meta name="viewport" content="width=device-width">
@@ -83,7 +83,6 @@
 
 	
 	<! this is couresel html by ChatGBT. start here.-->
-
 	<section class="carousel">
     <img src="images/winter1.jpg" 
          alt="Winter style 1" 
@@ -100,8 +99,9 @@
         <span class="dot"></span>
     </div>
 
+
 	
-    </section>
+    
 
 <p>Gluten-free selfies normcore chillwave. Listicle 90's chambray, seitan cold-pressed try-hard Etsy authentic flexitarian vinyl.
  Meditation bespoke freegan, single-origin coffee cred seitan 90's gentrify brunch Williamsburg squid cold-pressed. Brooklyn readymade Tumblr wayfarers ethical. 
@@ -114,8 +114,7 @@ Brooklyn paleo squid asymmetrical readymade migas gluten-free Austin. Etsy Wes A
  Bushwick fap Intelligentsia, whatever Etsy High Life Kickstarter migas retro Banksy YOLO Carles yr raw denim. Gluten-free fixie taxidermy pop-up, 
  actually Kickstarter flannel put a bird on it master cleanse.</p>
 
-
-<!-- Seasonal Carousel End -->	
+ </section>	
 	
 	<script>
 		function changeSeason(el) {
@@ -164,7 +163,7 @@ Brooklyn paleo squid asymmetrical readymade migas gluten-free Austin. Etsy Wes A
 					wear.src = "images/300x400.png";					
 				break;			   
 			}		
-			logo.src = "images/" + season + ".gif";				
+			logo.src = "images/" + season + ".gif";			
 			
 
 		    // 4. Now you can use that 'season' variable to change pics/colors
@@ -202,7 +201,8 @@ function nextSlide() {
     }
     showSlide(currentSlide);
 }
-// Start carousel timer
+
+<!-- Start carousel timer -->
 function startCarousel() {
     carouselTimer = setInterval(nextSlide, 3000);
 }
@@ -212,6 +212,8 @@ if (slides.length > 0) {
     showSlide(0);
     startCarousel();
 }
+// Seasonal Carousel End 
+
 
 
 // Dot navigation
